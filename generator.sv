@@ -23,8 +23,8 @@ task run();
         assert(t.randomize()) else $fatal("randomization failed");
         $display("[%0t] Generator: Addr=%0d, DataIn=%h, Write=%b, Read=%b", $time, t.addr, t.data_in, t.write, t.read);
 
-        gen_drv.try_put(t);
-        gen_scb.try_put(t);
+        gen_drv.put(t);
+        gen_scb.put(t);
     $display("hekko");
 
     end
