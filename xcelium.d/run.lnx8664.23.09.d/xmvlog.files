@@ -1,0 +1,13 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/transaction.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/mem_intf.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/generator.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/driver.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/monitor.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/scoreboard.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/env.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/mem.sv
+/home/cc/Downloads/SV_module/Lab40_layered_testbench/random_test.sv
