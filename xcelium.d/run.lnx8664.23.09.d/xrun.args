@@ -6,3 +6,8 @@
 file.f
 -access
 +rwc
+-coverage
+U
+-covdut
+testbench
+-covoverwrite

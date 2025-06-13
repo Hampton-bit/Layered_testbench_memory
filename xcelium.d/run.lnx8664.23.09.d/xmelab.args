@@ -4,6 +4,10 @@
 //
 -ACCESS
 +rwc
+-COVERAGE
+U
+-COVDUT
+testbench
 -no_analogsolver
 -MESSAGES
 -XLMODE

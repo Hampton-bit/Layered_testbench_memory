@@ -4,3 +4,7 @@
 //
 -ACCESS
 +rwc
+-COVERAGE
+U
+-COVDUT
+testbench

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<refinement-file-root>
+  <information comment-version="1" creation-time="Fri 13 Jun 2025 18:18:07 PKT" creator="cc" csCheck="false" save-ref-method="seq" tool-version="Cadence vManager22.03" rules-signature-c="41b75e426e28753979bc5c248d33b2ea">
+    <ucm-files>
+      <ucm-file domain="icc" modelCheckSum="0" path="/home/cc/Downloads/SV_module/Lab40_layered_testbench/cov_work/scope/icc_00000000_4e51be2f.ucm"></ucm-file>
+    </ucm-files>
+    <ccf-files></ccf-files>
+  </information>
+  <rules>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[14]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[15]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[16]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[17]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[18]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[19]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[20]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[21]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[22]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[23]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[24]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+    <rule ccType="type" domain="icc" entityName="$unit/&quot;transaction#(32, 8)::cover_alpha&quot;/a/&quot;auto[25]&quot;" entityType="coverbin" excTime="1749819522" name="review" packageName="worklib" reviewer="unknown" user="0" vscope="default"></rule>
+  </rules>
+  <cache-map>
+    <cache-entry key="0" value="cc"></cache-entry>
+  </cache-map>
+</refinement-file-root>

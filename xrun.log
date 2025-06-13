@@ -1,5 +1,5 @@
 xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s006: Started on Jun 12, 2025 at 21:37:27 PKT
+TOOL:	xrun(64)	23.09-s006: Started on Jun 13, 2025 at 18:23:10 PKT
 xrun
 	-f file.f
 		./transaction.sv
@@ -12,6 +12,9 @@ xrun
 		./mem.sv
 		./random_test.sv
 	-access +rwc
+	-coverage U
+	-covdut testbench
+	-covoverwrite
 DEFINE std       ./STD
 |
 xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,1): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/STD' (cds.lib command ignored).
@@ -192,9 +195,9 @@ xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,14): cds.
 DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
-Recompiling... reason: file './driver.sv' is newer than expected.
-	expected: Thu Jun 12 21:11:07 2025
-	actual:   Thu Jun 12 21:37:24 2025
+Recompiling... reason: file './transaction.sv' is newer than expected.
+	expected: Fri Jun 13 18:22:05 2025
+	actual:   Fri Jun 13 18:23:08 2025
 DEFINE std       ./STD
 |
 xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,1): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/STD' (cds.lib command ignored).
@@ -285,10 +288,16 @@ xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,14): cd
 DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
-file: ./driver.sv
-file: ./monitor.sv
+file: ./transaction.sv
+file: ./random_test.sv
+    function new(int data_in=0, int data_out=0, int addr=0, control_t ctrl=3);
+                                                                           |
+xmvlog: *W,ENUMERR (./transaction.sv,95|75): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    t= new(,,,3);
+              |
+xmvlog: *W,ENUMERR (./generator.sv,16|14): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
 	Total errors/warnings found outside modules and primitives:
-		errors: 0, warnings: 15
+		errors: 0, warnings: 17
 DEFINE std       ./STD
 |
 xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,1): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/STD' (cds.lib command ignored).
@@ -441,11 +450,18 @@ xmelab: *W,IGNFMT (./mem_intf.sv,24|51): Illegal width specifier in format ignor
 xmelab: *W,IGNFMT (./mem_intf.sv,45|55): Illegal width specifier in format ignored (%0c).
     if(write)  $display("\nWrite Trans | Data_in: %0c | Addr:%0d\n", data_in, addr);
                                                                   |
-xmelab: *W,IGNFMT (./transaction.sv,23|66): Illegal width specifier in format ignored (%0c).
+xmelab: *W,IGNFMT (./transaction.sv,26|66): Illegal width specifier in format ignored (%0c).
+    function new(int data_in=0, int data_out=0, int addr=0, control_t ctrl=3);
+                                                                           |
+xmelab: *W,ENUMERR (./transaction.sv,95|75): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    t= new(,,,3);
+              |
+xmelab: *W,ENUMERR (./generator.sv,16|14): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
         assert(t.randomize()) else $fatal("randomization failed");
                                                                |
-xmelab: *W,STRINT (./generator.sv,23|63): String literal argument supplied to integer parameter.
+xmelab: *W,STRINT (./generator.sv,25|63): String literal argument supplied to integer parameter.
 .......... Done
+	Enabling instrumentation for coverage types: functional
 	Generating native compiled code:
 DEFINE std       ./STD
 |
@@ -492,19 +508,21 @@ xmvlog_cg: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,14):
 DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xmvlog_cg: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
-		worklib.mem:sv <0x1ae24e1e>
+		worklib.mem:sv <0x69e564e9>
 			streams:   3, words:  1123
-		worklib.testbench:sv <0x0552631d>
+		worklib.testbench:sv <0x2bbe975e>
 			streams:   3, words:  1403
-		worklib.mem_intf:sv <0x10c40948>
-			streams:  56, words: 63300
+		worklib.mem_intf:sv <0x3df4036a>
+			streams:  58, words: 65536
 	Building instance specific data structures.
+xmelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+xmelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                     Instances  Unique
 		Modules:                     2       2
 		Interfaces:                  1       1
-		Registers:                  54      88
+		Registers:                  55      89
 		Scalar wires:                3       -
 		Vectored wires:              3       -
 		Named events:                2       6
@@ -513,6 +531,7 @@ xmvlog_cg: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15):
 		Parallel blocks:             1       1
 		Pseudo assignments:          1       -
 		Assertions:                  1       1
+		Covergroup Instances:        0       1
 		Compilation units:           1       1
 		SV Class declarations:       6       6
 		SV Class specializations:    6       6
@@ -568,6 +587,7 @@ Loading snapshot worklib.testbench:sv .................... Done
 SVSEED default: 1
 xcelium> source /home/cc/mnt/XCELIUM2309/tools/xcelium/files/xmsimrc
 xcelium> run
+xmsim: *W,COVDCG: (File: ./transaction.sv, Line: 48):(Time: 0 FS + 0) Covergroup instance (worklib.$unit_0x0ea12f36::transaction#(32'h00000020,32'h00000008)::cover_alpha@10), is garbage collected. Its instance coverage will not be reported separately and instead accumulated into corresponding type-coverage ($unit.transaction#(32, 8)::cover_alpha).
 [0] Generator: Addr=19, DataIn=49, Write=1, Read=0
 hekko
 [0] Generator: Addr=25, DataIn=42, Write=0, Read=1
@@ -3072,4 +3092,20 @@ hekko
 Simulation complete via $finish(1) at time 4997 NS + 0
 ./env.sv:53         $finish;
 xcelium> exit
-TOOL:	xrun(64)	23.09-s006: Exiting on Jun 12, 2025 at 21:37:28 PKT  (total: 00:00:01)
+xmsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+xmsim: *W,CGDEFN: Default name "testbench.environment.gen.t.cover_alpha" will be generated for covergroup instance "cover_alpha" as the name of the covergroup instance is not specified explicitly: ./transaction.sv, 48.
+xmsim: *W,CGDEFN: Default name "testbench.environment.drv.t.cover_alpha" will be generated for covergroup instance "cover_alpha" as the name of the covergroup instance is not specified explicitly: ./transaction.sv, 48.
+xmsim: *W,CGDEFN: Default name "testbench.environment.mon.t.cover_alpha" will be generated for covergroup instance "cover_alpha" as the name of the covergroup instance is not specified explicitly: ./transaction.sv, 48.
+xmsim: *W,CGDEFN: Default name "testbench.environment.scb.t1.cover_alpha" will be generated for covergroup instance "cover_alpha" as the name of the covergroup instance is not specified explicitly: ./transaction.sv, 48.
+xmsim: *W,CGDEFN: Default name "testbench.environment.scb.t2.cover_alpha" will be generated for covergroup instance "cover_alpha" as the name of the covergroup instance is not specified explicitly: ./transaction.sv, 48.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  testbench(testbench)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_4e51be2f.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_00000000_4e51be2f.ucd
+TOOL:	xrun(64)	23.09-s006: Exiting on Jun 13, 2025 at 18:23:11 PKT  (total: 00:00:01)

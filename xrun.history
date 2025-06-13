@@ -73,3 +73,26 @@ s72(12Jun2025:21:32:16):  xrun -f file.f -access +rwc
 s73(12Jun2025:21:33:25):  xrun -f file.f -access +rwc 
 s74(12Jun2025:21:33:40):  xrun -f file.f -access +rwc 
 s75(12Jun2025:21:37:27):  xrun -f file.f -access +rwc 
+s76(13Jun2025:17:41:37):  xrun -f file.f -access +rwc 
+s77(13Jun2025:17:42:09):  xrun -f file.f -access +rwc 
+s78(13Jun2025:17:43:23):  xrun -f file.f -access +rwc 
+s79(13Jun2025:17:43:54):  xrun -f file.f -access +rwc 
+s80(13Jun2025:17:44:55):  xrun -f file.f -access +rwc -coverage U -covdut random_test -covoverwrite 
+s81(13Jun2025:17:45:19):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s82(13Jun2025:17:47:25):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s83(13Jun2025:17:48:23):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s84(13Jun2025:17:49:11):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s85(13Jun2025:17:50:02):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s86(13Jun2025:17:50:57):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s87(13Jun2025:17:51:31):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s88(13Jun2025:17:52:49):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s89(13Jun2025:17:56:19):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s90(13Jun2025:17:57:49):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s91(13Jun2025:18:18:11):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s92(13Jun2025:18:18:49):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s93(13Jun2025:18:19:17):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s94(13Jun2025:18:20:59):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s95(13Jun2025:18:21:11):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s96(13Jun2025:18:21:50):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s97(13Jun2025:18:22:50):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
+s98(13Jun2025:18:23:10):  xrun -f file.f -access +rwc -coverage U -covdut testbench -covoverwrite 
