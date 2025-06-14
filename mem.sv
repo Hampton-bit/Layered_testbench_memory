@@ -8,6 +8,8 @@ timeprecision 1ns;
 
 logic [WIDTH-1:0]memory [0:DEPTH-1]; 
 
+
+
 always_ff@(posedge inf.clk )
 begin 
   if(inf.write) begin 

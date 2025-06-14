@@ -5,6 +5,8 @@ class env;
     mailbox gen_scb;
     mailbox mon_scb;
 
+    // mailbox drv_scb;
+
     generator gen;
     driver drv;
     monitor mon;
@@ -17,6 +19,7 @@ class env;
         gen_drv = new();
         gen_scb = new();
         mon_scb = new();
+        // drv_scb=new();
  
         this.vif = vif;
         this.repeat_count = repeat_count;
@@ -35,16 +38,15 @@ class env;
             drv.run();
             mon.run();
             scb.run();
-        join_any 
+        join_any
  
     endtask 
 
     task post_test();
-        @(scb_ended);
+        wait(scb_ended.triggered);
         
-        if(drv.txns_received == repeat_count && scb.txns_received == repeat_count) 
-            $display("****Test Passed****");
-        else $display("****Test Failed****");
+        wait(drv.txns_received == repeat_count && scb.txns_received == repeat_count);
+
     endtask 
 
     task run();

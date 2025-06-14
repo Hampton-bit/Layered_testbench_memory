@@ -13,6 +13,7 @@
 ./scoreboard.sv
 ./env.sv
 ./mem.sv
+./test.sv
 ./random_test.sv
 -CDSLIB
 ./xcelium.d/run.lnx8664.23.09.d/cdsrun.lib

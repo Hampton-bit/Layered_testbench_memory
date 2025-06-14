@@ -25,7 +25,7 @@ task run();
         // if (t.data_out === 'x) begin
         //     $fatal("[%0t] WARNING: Read uninitialized memory at address %0d", $time, t.addr);
         // end
-        $display("[%0t] Monitor: received Addr=%0d, DataIn=%h, DataOut=%h Write=%b, Read=%b", $time, t.addr, t.data_in, t.data_out, t.write, t.read);
+        // $display("[%0t] Monitor: received Addr=%0d, DataIn=%h, DataOut=%h Write=%b, Read=%b", $time, t.addr, t.data_in, t.data_out, t.write, t.read);
         mon_scb.put(t);
     end 
 

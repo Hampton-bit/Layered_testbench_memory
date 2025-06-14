@@ -7,4 +7,5 @@
 ./scoreboard.sv
 ./env.sv
 ./mem.sv
+./test.sv
 ./random_test.sv

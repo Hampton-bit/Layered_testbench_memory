@@ -17,14 +17,14 @@ class transaction #(parameter DEPTH=32, parameter WIDTH=8);
 
     rand logic [$clog2(DEPTH)-1:0] addr;
 
-    rand logic [WIDTH-1:0] data_in;     // data_in TO memory
+    rand logic [WIDTH-1:0] data_in; // data_in TO memory
     logic [WIDTH-1:0] data_out;   // data_in FROM memory
     //--------------------------------------------//
 
 
     function void display();
-    if(write)  $display("\nWrite Trans | Data_in: %0c | Addr:%0d\n", data_in, addr);
-    else $display("Read Trans | Addr:%0d",  addr);
+        if(write)  $display("\nWrite Trans | Data_in: %0c | Addr:%0d\n", data_in, addr);
+        else $display("Read Trans | Addr:%0d",  addr);
     endfunction
 
     constraint read_write{ 
@@ -38,7 +38,7 @@ class transaction #(parameter DEPTH=32, parameter WIDTH=8);
 
 
     covergroup cover_alpha;
-    option.per_instance = 1;
+    // option.per_instance = 1;
         a: coverpoint addr;
         d: coverpoint  data_in {
             bins upper={[8'h41:8'h5a]};
