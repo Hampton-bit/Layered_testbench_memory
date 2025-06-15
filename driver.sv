@@ -18,7 +18,7 @@ endfunction
 task run();
     forever begin 
         
-        t=new();
+        t=new(,,,4);
         
         gen_drv.get(t);
         // drv_scb.put(t);    

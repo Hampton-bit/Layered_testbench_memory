@@ -45,11 +45,13 @@ task run();
         mon_scb.get(t2);
         // if(got_mon_scb) begin 
             if(t2.read) begin 
-                if(t2.data_out != ref_model[t2.addr]) begin 
-                    error_count++;
-                    error_list[t2.addr].data=t2.data_in;
-                    error_list[t2.addr].ref_model=ref_model[t2.addr];
-                    $display("Mismatch | mem: %h | ref_model: %0h at address ",t2.data_out, ref_model[t2.addr], t2.addr);
+                if(ref_model.exists(t2.addr)) begin 
+                    if(t2.data_out != ref_model[t2.addr] ) begin 
+                        error_count++;
+                        error_list[t2.addr].data=t2.data_in;
+                        error_list[t2.addr].ref_model=ref_model[t2.addr];
+                        $display("Mismatch | mem: %h | ref_model: %0h at address ",t2.data_out, ref_model[t2.addr], t2.addr);
+                    end
                 end
             end
 

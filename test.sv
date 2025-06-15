@@ -5,7 +5,7 @@ program testbench(mem_intf.test intf);
     env environment;
 
     initial begin 
-        environment=new(50, intf);
+        environment=new(5000, intf);
         environment.run();
     end 
 

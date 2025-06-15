@@ -1,6 +1,6 @@
 typedef enum  
     {
-        PRINTABLE_ASCII, UPPER_CASE, LOWER_CASE, PROBABILITY
+        PRINTABLE_ASCII, UPPER_CASE, LOWER_CASE, PROBABILITY,ANY
     } 
     control_t;
 
@@ -28,7 +28,7 @@ class transaction #(parameter DEPTH=32, parameter WIDTH=8);
     endfunction
 
     constraint read_write{ 
-        read!=write;
+        read&&write !=0;
     }
 
     constraint read_write_range{ 
@@ -85,6 +85,7 @@ class transaction #(parameter DEPTH=32, parameter WIDTH=8);
         ctrl== PROBABILITY ->   data_in dist {
             [8'h41:8'h5a]:/80, [8'h61:8'h7a]:/20
         }; 
+        ctrl== ANY -> data_in inside{[0: (2**WIDTH)-1] };
     }
     // constraint read_after_write{
     //     write=>read
@@ -92,13 +93,12 @@ class transaction #(parameter DEPTH=32, parameter WIDTH=8);
 
 
 
-    function new(int data_in=0, int data_out=0, int addr=0, control_t ctrl=3);
+    function new(int data_in=0, int data_out=0, int addr=0, control_t ctrl=4);
         this.data_in= data_in;
         this.data_out= data_out;
         this.addr=addr;
         this.ctrl= ctrl;
-        cover_alpha=new();
-        
+        cover_alpha=new(); 
     endfunction
 
 

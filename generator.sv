@@ -13,8 +13,7 @@ function new(mailbox gen_drv, gen_scb, int repeat_count, event gen_ended);
     this.gen_scb= gen_scb;
     this.repeat_count=repeat_count;
     this.gen_ended= gen_ended;
-    t= new(,,,3);
-
+    t= new(0,0,0,4);
 
 endfunction
 
@@ -26,7 +25,7 @@ task run();
         t= new();
             
         assert(t.randomize()) else $fatal("randomization failed");
-        // $display("[%0t] Generator: Addr=%0d, DataIn=%h, Write=%b, Read=%b", $time, t.addr, t.data_in, t.write, t.read);
+        $display("[%0t] Generator: Addr=%0d, DataIn=%h, Write=%b, Read=%b", $time, t.addr, t.data_in, t.write, t.read);
         t.cover_alpha.sample();
         gen_drv.put(t);
         gen_scb.put(t);

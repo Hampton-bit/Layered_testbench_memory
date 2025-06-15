@@ -1,8 +1,9 @@
 class env;
 
     virtual mem_intf  vif;
+
     mailbox gen_drv;
-    mailbox gen_scb;
+    mailbox gen_scb; 
     mailbox mon_scb;
 
     // mailbox drv_scb;
@@ -11,8 +12,10 @@ class env;
     driver drv;
     monitor mon;
     scoreboard scb;
+
     event gen_ended;
     event scb_ended;
+
     int repeat_count;
 
     function new(int repeat_count, virtual mem_intf vif);
@@ -27,7 +30,6 @@ class env;
         drv = new(gen_drv, vif);
         mon = new(mon_scb, vif);
         scb = new(mon_scb, gen_scb, scb_ended, repeat_count);
-
 
     endfunction
 
