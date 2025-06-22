@@ -1,4 +1,0 @@
-IMC(64): 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems Inc - Simulator version: 23.09-s006 - Coverage engine version: 23.09-s006
-imc: *I,RUNLD: Successfully loaded run /home/cc/Downloads/SV_module/Lab40_layered_testbench/cov_work/scope/test.
-Starting gui mode
-imc: *I,imc.tool.cov.version.diff: "There is a difference between the IMC tool version 22.03 and the coverage version 23.09-s006"
